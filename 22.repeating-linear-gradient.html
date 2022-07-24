@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid aqua;
+            /* 从上到下开始，按逆时针旋转方向90度，从红色到20px，开始变成绿色，20px到40px间由绿色过渡成蓝色，在40px结束 */
+            /* 不要repeating ，就不平铺*/
+            background-image:repeating-linear-gradient(to top right,yellow 0px,blue 20px,red 50px);
+            /* 位置可以是数字+px，也可以是百分比（占容器的百分比） */
+            /* 旋转单位可以是  deg，也可以是方向: to top（旋转90度） */
+
+            /* 相当于一个背景图片 */
+        }   
+        .box2{
+            width: 300px;
+            height: 400px;
+            margin: 50px 0;
+            border: 1px solid red;
+            /* background-image: radial-gradient(red,green,blue); */
+
+            /*圆形：circle ，椭圆：ellipse ,默认情况下： 正方形-->圆形； 长方形-->椭圆*/
+            background-image: radial-gradient(ellipse, red,green,blue);
+
+            /* 原点在容器的左上角，表示在150px 50px的坐标点，从零到22px位透明，从24px开始变成黄色 */
+            background-image: radial-gradient( circle at 150px 50px,transparent 22px,rgb(221, 154, 10) 24px);
+
+
+            
+            background-image:radial-gradient(ellipse at 150px 50px,transparent 22px,rgb(221, 154, 10) 24px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+</body>
+</html>

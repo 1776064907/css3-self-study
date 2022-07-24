@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns:120px 120px 120px ;
+            width: 400px;
+            height: 400px;
+            border: 1px solid red;
+        }
+        .items{
+           
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 10px 10px;
+            border-radius: 50px;
+            text-align: center;
+            line-height: 100px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="items">column1</div>
+        <div class="items">column2</div>
+        <div class="items">column3</div>
+        <div class="items">column4</div>
+        <div class="items">column5</div>
+        <div class="items">column6</div>
+    </div>
+</body>
+</html>

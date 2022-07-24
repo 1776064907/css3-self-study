@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 注意：要想生效object-fit必须先要给图片设置一个范围的尺寸，如果不设置，那object - fit 没作用 */
+        div {width: 200px;height: 400px;border: 2px solid #f0f;}
+        section {display: flex;justify-content: space-around;}
+        img {width: 100%;height: 100%;}
+        .fill {object-fit: fill;}
+        .contain {object-fit: contain;}
+        .cover {object-fit: cover;}
+        .scale-down {object-fit: scale-down;}
+        .none {object-fit: none;}
+    </style>
+</head>
+<body>
+    <h1>object-fit 属性。（容器宽高分别为200px、400px,带边框）选择了一张大于容器宽度，一张小于容器宽度的图，图片宽高都设置为100%</h1>
+    <h2>不使用 object-fit图片的宽带高</h2>
+    <section>
+        <div><img src="./image/object -fit 1.jpg" alt="picture" /></div>
+        <div><img src="./image/object-fit 2.jpg" alt="picture" /></div>
+    </section>
+    <h2>object-fit: fill (默认);默认，不保证保持原有的比例，内容拉伸填充整个内容容器。</h2>
+    <section>
+        <div><img class="fill" src="./image/object -fit 1.jpg" alt="picture" /></div>
+        <div><img class="fill" src="./image/object-fit 2.jpg" alt="picture" /></div>
+    </section>
+    <h2>object-fit: contain;保持原有尺寸比例。内容被缩放。</h2>
+    <section>
+        <div><img class="contain" src="./image/object -fit 1.jpg" alt="picture" /></div>
+        <div><img class="contain" src="./image/object-fit 2.jpg" alt="picture" /></div>
+    </section>
+    <h2>object-fit: cover;保持原有尺寸比例。图片覆盖容器，超出部分内容可能被剪切。</h2>
+    <section>
+        <div><img class="cover" src="./image/object -fit 1.jpg" alt="picture" /></div>
+        <div><img class="cover" src="./image/object-fit 2.jpg" alt="picture" /></div>
+    </section>
+    <h2>object-fit: scale-down;保持原有尺寸比例。内容的尺寸与 none 或 contain 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。</h2>
+    <section>
+        <div><img class="scale-down" src="./image/object -fit 1.jpg" alt="picture" /></div>
+        <div><img class="scale-down" src="./image/object-fit 2.jpg" alt="picture" /></div>
+    </section>
+    <h2>object-fit: none;保留原有元素内容的长度和宽度，也就是说内容不会被重置。</h2>
+    <section>
+        <div><img class="none" src="./image/object -fit 1.jpg" alt="picture" /></div>
+        <div><img class="none" src="./image/object-fit 2.jpg" alt="picture" /></div>
+    </section>
+</body>
+</html>

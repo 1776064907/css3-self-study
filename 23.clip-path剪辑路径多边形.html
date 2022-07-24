@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        img{
+            /* 左上角为原点 */
+            /* 确定容器的剪辑坐标，连接坐标后，之外的为被剪辑的区域 */
+            /* 可以是数字+px、百分比（容器自身的百分比） */
+            clip-path:polygon(0 0,100% 0 ,50% 100%)  ;
+        }
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 50px 50px;
+            clip-path: polygon(0 0,100% 0,50% 50%,0 100%,100% 100%);
+        }
+
+        .box2{
+            margin: 50px 50px;
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            /* 值为一个坐标点和半径组成，左上角为原点，定义的时候可以用at关键字定义坐标 */
+            /* circle(半径 at  坐标位置) */
+            /* 半径为50%，圆心坐标在 50% 50%，坐标可以是数字+px、百分比（自身的百分比） */
+            clip-path: circle(50% at 0% 0%);
+        }
+        .box3{
+            margin: 50px 50px;
+            width: 300px;
+            height: 300px;
+            background-color: cyan;
+            /*椭圆的x轴半径为20% ，y轴为30%，圆心在50% 50% */
+            clip-path: ellipse(20% 30% at 50% 50%);
+        }
+
+    </style>
+</head>
+<body>
+    <img src="./image/object-fit 2.jpg" alt="">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* <!-- 兄弟相邻的用加  +  --> */
+        div+p{
+            background-color: yellow;
+        }
+        
+        /* <!-- 是同级，但不是相邻的 --> */
+        div~span{
+            background-color: green;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <!-- 兄弟相邻的用  +   -->
+   
+    <p>之前段落，不会添加背景颜色。</p>
+    <div>
+        <h2>DIV 内部标题</h2>
+        <p>DIV 内部段落。</p>
+    </div>
+        
+        <p>DIV 之后的第一个 P 元素。</p>
+        
+        <p>DIV 之后的第二个 P 元素。</p>    
+
+        <span>DIV 之后的span 元素</span>
+</body>
+</html>

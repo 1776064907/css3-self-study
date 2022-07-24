@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .box{
+            position: relative;
+          
+        }
+        .mask{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(0,0,0,.4);
+            /* 透过该层的底层元素模糊化 */
+            backdrop-filter:blur(2px);
+        }
+        img{
+            /* 模糊该层的内容 */
+            filter: blur(2px);
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="box">
+        <img src="./pineapple.jpg" alt="">
+        <div class="mask">asdasdasd</div>
+    </div>
+</body>
+</html>

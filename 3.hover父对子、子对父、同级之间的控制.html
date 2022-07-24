@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .father:hover .son{
+            color: yellow;
+        }
+/* 子对父 */
+        /* .d1{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            
+        }
+        .d2:hover~.d1{
+           background-color: #fff;
+        } */
+        /* 同级之间 */
+        .one:hover + .two{
+            background-color: green;
+        }
+        .one:hover + .two .two1{
+            color: yellow;
+        }
+        .two1:hover+.two2{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 父对子 -->
+    <div class="father">
+        <div class="son">hello</div>
+    </div>
+    <!-- 子对父 -->
+    <br>
+    <br>
+    <div class="d1">
+        <div class="d2">hello</div>
+    </div>
+
+    <!-- 同级之间 -->
+    <div class="one">
+        <div class="one1">啊实打实</div>
+    </div>
+    <div class="two">
+        <div class="two1">发生的方式</div>
+        <div class="two2">asdadad</div>
+    </div>
+    
+</body>
+</html>

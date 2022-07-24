@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        p.test1
+        {
+            width:9em; 
+            border:1px solid #000000;
+            /* keep-all默认值，当某个区域有个单词到边缘的时候，空间不够，它就会跳到下一行，而不会拆分单词 */
+            word-break:keep-all;
+        }
+        
+        p.test2
+        {
+            width:9em; 
+            border:1px solid #000000;
+            /* 当单词到边缘了，会直接拆分单词换行 */
+            word-break:break-all;
+        }
+        p.test
+        {
+            width:11em; 
+            border:1px solid #000000;
+            /* 当某个单词因为太长了而超出区域，强行让这个单词换行 */
+            word-wrap:break-word;
+        }
+        </style>
+</head>
+<body>
+    <p class="test1"> This paragraph contains some text. This line will-break-at-hyphenates.</p>
+    <p class="test2"> This paragraph contains some text: The lines will break at any character.</p>
+    
+    
+    <p class="test"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  input{
+            margin: 50px 500px;
+            width:100px;
+            height:100px;
+            background-color: pink;
+            border: 1px solid #000;
+            /* 想到宽度生效，必须要有样式。   可以复合写 */
+            /* outline-width:10px ;
+            outline-color: red ;
+            outline-style: solid; */
+            outline: 10px red solid;
+
+        }
+        div{
+            margin-left: 500px;
+            width: 200px; height: 120px;
+            background: #efebe9;
+            border: 5px solid #B4A078;
+            outline: #b4787d dotted 1px;
+
+            /* 轮廓线的偏移 */
+            outline-offset:-10px ;
+            margin-bottom: 20px;
+  }
+    </style>
+</head>
+<body>
+    <!-- outline属性 ：位于  盒子  的 border和margin之间 -->
+    <input type="text" >
+    <div></div>
+</body>
+</html>

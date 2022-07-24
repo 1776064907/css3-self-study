@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .scene{
+            margin: calc(50vh - 150px) auto ;
+            width: 600px;
+            height: 300px;
+            /* border: 1px solid #000; */
+            /* 透视一定要放在父元素里 */
+            perspective: 800px;
+            /* transform-style:preserve-3d ; */
+        }
+        .box{
+            position: relative;
+            width: 600px;
+            height: 300px;
+            /* background-color: pink; */
+            /* 3d立体属性一定要放在父元素里 */
+            transform-style:preserve-3d ;
+            /* 如果在此处加rotate就会与动画里的rotate发生重叠 */
+            /* transform: rotateX(-20deg); */
+            animation: rotate 10s cubic-bezier(0.21, 0.19, 0.56, 0.65) infinite ;
+        }
+        .scene:hover .box{
+            animation-play-state: paused ;
+        }
+        @keyframes rotate{
+            0%{
+               transform: rotateX(-10deg); 
+            }
+            100%{
+                transform:rotateX(-10deg) rotateY(360deg) ;
+            }
+        }
+        .item{
+            position: absolute;
+            left: calc(50% - 100px);
+            bottom: 0;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            transform:rotateY(calc(var(--i) * -40deg)) translateZ(300px) ;
+        }
+        /* .item1{
+            transform:translateZ(300px) ;
+        }
+        .item2{
+            transform: rotateY(-40deg) translateZ(300px) ;
+        }
+        .item3{
+            transform: rotateY(-80deg) translateZ(300px) ;
+        }
+        .item4{
+            transform: rotateY(-120deg) translateZ(300px) ;
+        }
+        .item5{
+            transform: rotateY(-160deg) translateZ(300px) ;
+        }
+        .item6{
+            transform: rotateY(-200deg) translateZ(300px) ;
+        }
+        .item7{
+            transform: rotateY(-240deg) translateZ(300px) ;
+        }
+        .item8{
+            transform: rotateY(-280deg) translateZ(300px) ;
+        }
+        .item9{
+            transform: rotateY(-320deg) translateZ(300px) ;
+        } */
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="box">
+                <div class="item item1" style="--i:0"><img src="./images/3D/3dmm-01.webp" alt=""></div>
+                <div class="item item2" style="--i:1"><img src="./images/3D/3dmm-02.webp" alt=""></div>
+                <div class="item item3" style="--i:2"><img src="./images/3D/3dmm-03.webp" alt=""></div>
+                <div class="item item4" style="--i:3"><img src="./images/3D/3dmm-04.webp" alt=""></div>
+                <div class="item item5" style="--i:4"><img src="./images/3D/3dmm-05.webp" alt=""></div>
+                <div class="item item6" style="--i:5"><img src="./images/3D/3dmm-06.webp" alt=""></div>
+                <div class="item item7" style="--i:6"><img src="./images/3D/3dmm-07.webp" alt=""></div>
+                <div class="item item8" style="--i:7"><img src="./images/3D/3dmm-08.webp" alt=""></div>
+                <div class="item item9" style="--i:8"><img src="./images/3D/3dmm-09.webp" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>

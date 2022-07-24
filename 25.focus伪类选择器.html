@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /* 未访问链接，表示初始状态没有访问时的颜色，默认值 */
+        a:link{color:#ccc;}
+
+        /* 已访问链接，表示如果已经点进去，显示的颜色 */
+        a:visited{color: skyblue;}
+
+        /* 鼠标停留在链接上时的颜色 */
+        a:hover{color: yellow;}
+
+        /* 鼠标点击链接时显示的颜色 */
+        a:active{color: green;}
+          
+        
+
+        /* focus一般配合input的标签使用，显示鼠标点击后的样式效果 */
+        input:focus{
+         outline-color: green;
+        }
+        /* :focus>:hover>:active 这是这个三个伪类选择器的出场顺序 */
+    </style>
+</head>
+<body>
+    <p><b><a href="https://www.runoob.com/" target="blank">这是一个链接标签</a></b></p>
+    <p><b>注意：</b> a:hover 必须在 a:link 和 a:visited 之后，需要严格按顺序才能看到效果。</p>
+<p><b>注意：</b> a:active 必须在 a:hover 之后。</p>
+
+
+<p>点击文本输入框表单可以看到黄色背景:</p>
+<p><b>注意：</b> a标签不能用focus，但是可以作为input相邻标签获得样式</p>
+<!-- 例如：.site_header .search input:focus+a -->
+<form>
+First name: <input type="text" name="firstname" /><br>
+Last name: <input type="text" name="lastname" />
+</form>
+</body>
+</html>

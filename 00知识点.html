@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- /* 如果想要使用margin auto  块级盒子必须有宽度,如果他的父级有宽度那么它可以继承他的父级宽度，如果他的
+            父级是body那么他不可以使用margin auto居中 */ -->
+
+  <!-- list-style: none;    列表符号清除   例如  ul  li  列表里的符号-->
+
+  <!-- /* a标签默认是行内元素，宽高由内容撑开，并且无法设置宽高，此时默认情况用户只能点击文字区域才能有效 */ -->
+  <!-- /* 如果把a标签转换成块级元素，此时可以设置宽高，会让a标签范围更大，用户可以点击调整的区域也越大 */ -->
+
+  <!-- 绝对定位的盒子显示的是行内块特点，加宽高都可以生效，如果没有宽度也没有内容，那么他的宽度就是0 -->
+
+  <!--text-align  只对行内块元素起作用  -->
+
+  <!-- 在flex布局中的技巧，当文本溢出时显示省列号 -->
+  <!-- 给父级添加 -->
+  <!-- flex: 1;
+   /* 因为弹性盒子的尺寸会被内容撑开，所有不换行的内容可以撑开这个盒子的尺寸 */
+    width: 0; -->
+
+  <!-- 给子级添加 -->
+  <!-- /* 溢出的的时候显示省列号 */ -->
+  <!-- text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; -->
+
+  <!-- 定位的元素都要设置宽高，因为定位之后显示行内块模式，宽高默认由内容撑开 -->
+
+  <!-- 侧边导航栏的  a 标签一定要转成块，这样用户才能在li的整个一栏都可以点击 -->
+
+  <!-- 去除img标准之间的间隙  给父级添加font-size：0; -->
+
+  <!-- 图片与父级盒子底部产生间隙的时候，把img变成块元素就行了 -->
+
+  <!-- text-align 对块级元素不起作用 -->
+
+  <!-- box-shadow盒子阴影可以设置多个，例如 box-shadow:10px 1px 0px 0px red,10px 1px 0px 0px red,10px 1px 0px 0px red;
+  只要中间隔个逗号就行了 -->
+
+  <!-- /* 弹性布局中的图片之所以拉长是因为它本身没有高度，继承了父级高度，所以加个align-items就行了 */ -->
+  <!-- align-items: center; -->
+
+  <!-- /* 弹性布局中子元素没有高度，就被拉伸从而继承父级元素，此时给子元素设置align-self/align-end，元素才能随内容的多少而变化高度 */
+    align-self: flex-start; -->
+
+  <!-- /* 要想生效object-fit属性，宽高必须设置尺寸*/
+            object-fit: cover; -->
+
+  <!-- 生效 align-content  要设置 flex-direction 和flex-wrap  ,注意 盒子的高度-->
+  <!-- .box:hover::after -->
+</body>
+
+</html>

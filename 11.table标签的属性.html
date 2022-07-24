@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+            .music_top{
+                width: 800px;
+                height: 700px;
+                border: 1px solid #000;
+                margin: 50px auto 0;
+            }
+            table{
+                width: inherit;
+                border: 2px solid red;
+                
+                /* 这个三个值都是写在父元素标签里 */
+                /*将单元格的边框合并一起，这时会忽略border-spacing和empty-cells属性，
+                   有的值  border-spacing:separate默认值丨 collapse   */
+                border-collapse: collapse;
+
+                /* 调节单元格之间的边框间距，border-spacing:   */
+                border-spacing: 10px;
+
+
+                /* 设置是否显示表格的空单元格，
+                 empty-cells: hide 不在空单元格周围绘制边框  丨  
+                              show 在空单元格周围绘制边框，默认值
+                              inherit   继承父级empty-cells的值*/
+                empty-cells: hide;
+            }
+            table tr th{
+                border: 1px solid green;
+                
+            }
+            table tr td{
+                border: 1px solid green;
+               
+            }
+
+            colgroup{
+                background-color: pink;
+            }
+            .col_2{
+                background-color: red;
+                width: 100px;
+            }
+            /* :nth-child()与nth-of-type的作用相同 */
+            td:nth-child(3){
+                width: 300px;
+                background-color: skyblue;
+            }
+            td:nth-of-type(3){
+                width: 350px;
+            }
+    </style>
+</head>
+<body>
+            <div class="music_top">
+                <table>
+                    <!-- colgroup 与col标签含义相同，当子元素含col标签，那边colgroup的样子就
+                       会被子元素覆盖，span标签表示col元素横跨的列数，默认值为1 -->
+                    <colgroup span="2" width="50px" >
+                        <col>
+                        <col span="1" class="col_2">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <!-- 跨列合并 -->
+                            <!-- 要删除被合并的单元格 -->
+                            <th colspan="2">1</th>
+                            <th>3</th>
+                            <th>3</th>
+                            <th>4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- 跨行合并 -->
+                            <!-- 要删除被合并的单元格 -->
+                            <td rowspan="3">6</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                           
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+</body>
+</html>

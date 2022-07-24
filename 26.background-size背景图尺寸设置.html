@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .box{
+            margin: 50px auto;
+            width: 300px;
+            height: 300px;
+            border: 1px solid skyblue;
+            background-repeat: no-repeat;
+            background-image: url(./image/object\ -fit\ 1.jpg);
+
+            /* 数字+px， 第一个值表示设置背景图片的宽，第二值表示设置图片的高，如果只设一个值。另一个值表示自动 */
+            background-size:150px 300px ;
+
+            /* 百分比 ，与数字一样*/
+            background-size:100% 100%;
+
+            /* 背景图片的原始尺寸比例不变，只要一边铺满了，另一边就会停止缩放 */
+            background-size: contain;
+
+            /* 背景图片的原始尺寸不变，会铺满全容器，但是，多出来的会被裁剪掉 */
+            background-size: cover;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
